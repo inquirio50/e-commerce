@@ -1,22 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Models
 {
     public class ProductOrder
     {
-        [Key]
         public int ProductOrderId { get; set; }
-        [ForeignKey(nameof(OrderedProduct))]
+        [ForeignKey(nameof(Product))]
         public int ProductId { get; set; }
-        public Product OrderedProduct { get; set; }
-        [ForeignKey(nameof(OrderPlaced))]
+        public Product Products { get; set; }
+        [ForeignKey(nameof(Order))]
         public int OrderId { get; set; }
-        public Order OrderPlaced { get; set; }
+        public Order Orders { get; set; }
     }
 }

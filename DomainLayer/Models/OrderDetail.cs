@@ -14,16 +14,10 @@ namespace Domain.Models
         public int OrderDetailId { get; set; }
         [Required]
         public int Quantity { get; set; }
-        [Required]
-        public int Price { get; set; }
-        [ForeignKey(nameof(ProductId))]
+        [ForeignKey(nameof(Product))]
         public int ProductId { get; set; }
-        public Product Product { get; set; }
+        public Product Products { get; set; }
         [ForeignKey(nameof(Order))]
         public int OrderId { get; set; }
-        public Order Order { get; set; }
-        [ForeignKey(nameof(Cart))]
-        public int CartId { get; set; }
-        public Cart Cart { get; set; }
     }
 }

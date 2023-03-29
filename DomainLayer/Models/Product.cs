@@ -18,13 +18,40 @@ namespace Domain.Models
         public string Description { get; set; }
         [Required]
         public int Price { get; set; }
+        [Required]
+        public int Quantity
+        {
+            get { return quantity; } 
+            set
+            {
+                quantity = value;
+                if (quantity < 1)
+                {
+                    IsAvailable = false;
+                }
+                else
+                {
+                    IsAvailable = true;
+                }
+            }
+        }
+        public bool IsAvailable 
+        {
+            get { return isAvailable; }
+            set { isAvailable = value; }
+        }
+
         [Required, DataType(DataType.ImageUrl)]
         public string Image { get; set; }
         public ICollection<Review> Review { get; set; }
-        public ICollection<ProductOrder> ProductOrders { get; set; }
+        public ICollection<ProductOrder> Orders { get; set; }
         public ICollection<ProductCategory> ProductCategories { get; set; }
-        public ICollection<ProductCartItem> ProductCartItems { get; set; }
 
+
+
+        //fields
+        private int quantity;
+        private bool isAvailable;
 
     }
 }

@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-Commerce_WebAPI", "E-Commerce_WebAPI\E-Commerce_WebAPI.csproj", "{3FD40712-6D7D-47A5-83BA-A84EE1E6C08B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "E-Commerce_WebAPI\WebAPI.csproj", "{3FD40712-6D7D-47A5-83BA-A84EE1E6C08B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-Commerce_Domain", "DomainLayer\E-Commerce_Domain.csproj", "{92FD0D75-5604-4F37-96B3-5FB5E58F4D3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "DomainLayer\Domain.csproj", "{92FD0D75-5604-4F37-96B3-5FB5E58F4D3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-Commerce_Service", "ServiceLayer\E-Commerce_Service.csproj", "{57130C27-F0D4-440F-B184-9A8CA530E8E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "ServiceLayer\Service.csproj", "{57130C27-F0D4-440F-B184-9A8CA530E8E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-Commerce_DataAccess", "DataAccess\E-Commerce_DataAccess.csproj", "{F17281C6-8541-42EC-B2A9-CB441A5E7A89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{F17281C6-8541-42EC-B2A9-CB441A5E7A89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

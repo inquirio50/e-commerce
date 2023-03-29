@@ -1,18 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Models
+namespace DataAccess.DTO.CustomerDTO
 {
-    public class Customer
+    public class CustomerCreateDTO
     {
-        [Key]
-        public int CustomerId { get; set; }
         [Required]
         [MaxLength(20)]
         [DisplayName("FirstName")]
@@ -33,9 +30,5 @@ namespace Domain.Models
         [Required]
         [MaxLength(50)]
         public string Address { get; set; }
-
-        public ICollection<Order> Orders { get; set; }
-        public ICollection<Review> Reviews { get; set; }
-
     }
 }

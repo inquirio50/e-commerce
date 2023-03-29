@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DataAccess.DTO.OrderDetailsDTO;
+using DataAccess.DTO.ProductDTO;
+using Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -6,18 +9,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Models
+namespace DataAccess.DTO.OrdersDTO
 {
-    public class Order
+    public class OrdersGetDTO
     {
         [Key]
         public int OrderId { get; set; }
         [DataType(DataType.DateTime)]
-        public DateTime OrderDate { get; set; } = DateTime.Now;
+        public DateTime OrderDate { get; set; }
         [ForeignKey(nameof(Customer))]
         public int CustomerId { get; set; }
-        public ICollection<OrderDetails> OrderDetails { get; set; }
-        public ICollection<ProductOrder> Products { get; set; }
+        public ICollection<OrderDetailsGetDTO> OrderDetails { get; set; }
     }
 }
-

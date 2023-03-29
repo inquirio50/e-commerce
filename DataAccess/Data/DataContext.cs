@@ -22,11 +22,9 @@ namespace Data
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetails> OrderDetails { get; set; }
         public DbSet<Cart> Carts { get; set; }
-        public DbSet<CartItem> CartItems { get; set; }
+        //public DbSet<CartItem> CartItems { get; set; }
         public DbSet<Review> Reviews { get; set; }
-        public DbSet<Reviewer> Reviewers { get; set; }
         public DbSet<ProductCategory> ProductCategories { get; set; }
-        public DbSet<ProductCartItem> ProductCartItems { get; set; }
         public DbSet<ProductOrder> ProductOrders { get; set; }
     }
 }
