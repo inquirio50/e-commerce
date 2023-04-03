@@ -16,8 +16,14 @@ namespace Domain.Models
         public int Quantity { get; set; }
         [ForeignKey(nameof(Product))]
         public int ProductId { get; set; }
-        public Product Products { get; set; }
         [ForeignKey(nameof(Order))]
         public int OrderId { get; set; }
+        [Required]
+        public string CustomerName { get; set; }
+        [Required]
+        [Phone]
+        public string CustomerPhoneNumber { get; set; }
+        [Required]
+        public string DeliveryAddress { get; set; }
     }
 }

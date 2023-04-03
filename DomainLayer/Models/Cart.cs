@@ -12,12 +12,12 @@ namespace Domain.Models
     {
         [Key]
         public int CartId { get; set; }
+        [ForeignKey(nameof(Customer))]
+        public int CustomerId { get; set; }
         [Required, DataType(DataType.DateTime)]
         public DateTime CreateAt { get; set; } = DateTime.Now;
         [Required, DataType(DataType.DateTime)]
-        public DateTime UpdateAt { get; set; } = DateTime.Now;
-        [ForeignKey(nameof(Product))]
-        public int ProductId { get; set; }
+        public DateTime? UpdateAt { get; set; }
         public ICollection<Product> Products { get; set; }
     }
 }

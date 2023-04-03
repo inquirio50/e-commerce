@@ -16,7 +16,7 @@ namespace Domain.Models
         public DateTime OrderDate { get; set; } = DateTime.Now;
         [ForeignKey(nameof(Customer))]
         public int CustomerId { get; set; }
-        public ICollection<OrderDetails> OrderDetails { get; set; }
+        public List<OrderDetails> OrderDetails { get; set; }
         public ICollection<ProductOrder> Products { get; set; }
     }
 }

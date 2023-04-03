@@ -68,7 +68,9 @@ namespace DataAccess.Repository
         {
             try
             {
-                var getCustomers = await _customerContext.Customers.ToListAsync();
+                var getCustomers = await _customerContext.Customers
+                    .Include(o => o.Orders)
+                    .ToListAsync();
                 return getCustomers.AsQueryable();
             }
 
@@ -82,7 +84,9 @@ namespace DataAccess.Repository
         {
             try
             {
-                var customer = await _customerContext.Customers.FirstOrDefaultAsync(r => r.CustomerId == customerId);
+                var customer = await _customerContext.Customers
+                    .Include(r => r.Orders)
+                    .FirstOrDefaultAsync(r => r.CustomerId == customerId);
                 if (customer != null)
                 {
                     return customer;
